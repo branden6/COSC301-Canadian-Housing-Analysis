@@ -1,6 +1,6 @@
 # COSC301 — Canadian Housing Price Index Analysis
 
-Data analytics pipeline looking at new housing price trends across Canada using Statistics Canada data going back to 1981.
+Data analytics pipeline looking at housing price trends across Canada using data from 1981 - 2024.
 
 **Course**: COSC301 | **Project Type**: Information Extraction
 
@@ -8,7 +8,7 @@ Data analytics pipeline looking at new housing price trends across Canada using 
 
 ## Analytics Question
 
-How have housing price indexes changed across Canadian regions over time, and which regions have seen the biggest increases?
+TBD fill this out later once we start with the our actual scripts
 
 ---
 
@@ -24,10 +24,10 @@ How have housing price indexes changed across Canadian regions over time, and wh
 
 ## Dataset
 
-- **Source**: [New Housing Price Indexes — Statistics Canada via Kaggle](https://www.kaggle.com/)
+- **Source**: [New Housing Price Indexes — Statistics Canada via Kaggle](https://www.kaggle.com/datasets/noeyislearning/housing-price-indexes)
 - **File**: `data/housing_price_indexes.csv`
 - **Size**: 63,120 rows × 15 columns
-- **Coverage**: Canada-wide, 40 geographic regions, January 1981 onwards
+- **Coverage**: Canada-wide, 40 geographic regions, January 1981 - 2024.
 - **Unit**: Index (December 2016 = 100)
 - **License**: Statistics Canada Open Licence
 
@@ -54,7 +54,7 @@ Tableau                   → dashboards and visualizations
 ---
 
 ## Folder Structure
-
+change this throughout project whenever you add something new
 ```
 COSC301-Canadian-Housing-Analysis/
 ├── data/
