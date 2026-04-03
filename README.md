@@ -37,7 +37,6 @@ This project uses the New Housing Price Index (NHPI), which measures changes in 
 
 As a result, the dataset does not reflect average home prices or resale market values. Instead, it captures how the prices of newly constructed homes change over time.
 
-Because of this, long-term comparisons (e.g., 1981–2024) may produce unintuitive results due to differences in index baselines across regions. Therefore, our analysis focuses primarily on more recent periods (e.g., 2016–2024 and 2020–2024) to ensure more meaningful and consistent comparisons across regions.
 ---
 
 ## Project Pipeline
@@ -46,18 +45,49 @@ Because of this, long-term comparisons (e.g., 1981–2024) may produce unintuiti
 data/housing_price_indexes.csv
         │
         ▼
-1_setup_database.py       → loads raw CSV into SQLite (raw_housing table)
+1_setup_database.py           → loads raw CSV into SQLite (raw_housing table)
         │
         ▼
-2_raw_data_cleaning.py    → cleans data, saves to SQLite (cleaned_housing table)
+2_raw_data_cleaning.py        → cleans data, saves to SQLite (cleaned_housing table)
         │
         ▼
-3_growth_analysis.py      → exploratory long-term NHPI comparison (1981 - 2024)
+3_growth_analysis.py          → exploratory long-term NHPI comparison (1981 - 2024)
         │
         ▼
-     Tableau              → dashboards and visualizations
+4_recent_growth_analysis.py   → post COVID growth analysis (2020-2024)
+        │
+        ▼
+     Tableau                  → dashboards and visualizations
 
 ```
+
+---
+
+## Analysis Scripts
+
+### 3_growth_analysis.py
+
+Explores long-term changes in the New Housing Price Index (NHPI) across Canadian regions.
+
+- Aggregates monthly data into yearly averages  
+- Compares earliest and latest available values per region  
+- Computes percentage growth  
+
+**Note:**  
+Due to the indexed nature of the NHPI (December 2016 = 100), long-term comparisons may produce unintuitive results and are used for exploratory context only.
+
+---
+
+### 4_recent_growth_analysis.py
+
+Analyzes recent growth in new housing prices across Canadian regions (2020–2024).
+
+- Filters data to recent years (2020+)  
+- Computes yearly averages per region  
+- Calculates percentage growth from 2020 to latest available year (2024)
+- Ranks regions by growth 
+
+
 ---
 
 ## Folder Structure
@@ -73,6 +103,7 @@ COSC301-Canadian-Housing-Analysis/
 │   ├── 1_setup_database.py           # Step 1: Load raw CSV into SQLite
 │   ├── 2_raw_data_cleaning.py        # Step 2: Clean data and store in SQLite
 │   ├── 3_growth_analysis.py          # Exploratory long-term comparison
+│   ├── 4_recent_growth_analysis.py   # post COVID growth analysis (2020-2024)
 ├── README.md
 └── requirements.txt
 
