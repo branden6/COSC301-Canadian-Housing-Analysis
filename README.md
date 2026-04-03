@@ -100,7 +100,7 @@ python scripts/2_raw_data_cleaning.py
 | `month` | int | Month extracted from ref_date |
 | `geo` | string | Geographic region (e.g., Canada, Ontario, Vancouver) |
 | `price_category` | string | Index type: Total (house and land), House only, Land only |
-| `value` | float | Price index value (base: Dec 2016 = 100) |
+| `value` | float | Price index value (base value: Dec 2016 = 100, so 38.2 would mean prices were about 38% if what they were in Dec 2016) |
 | `status` | string | Data quality flag: `normal`, `E` (estimate), `..` (not available), `x` (suppressed) |
 
 ---
