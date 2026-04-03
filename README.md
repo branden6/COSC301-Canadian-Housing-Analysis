@@ -31,11 +31,18 @@ TBD fill this out later once we start with the our actual scripts
 - **Unit**: Index (December 2016 = 100)
 - **License**: Statistics Canada Open Licence
 
+## Important Note on Dataset
+
+This project uses the New Housing Price Index (NHPI), which measures changes in the selling prices of newly built homes. The data is reported as an index with December 2016 = 100, meaning values represent relative price levels rather than actual housing prices in dollars.
+
+As a result, the dataset does not reflect average home prices or resale market values. Instead, it captures how the prices of newly constructed homes change over time.
+
+Because of this, long-term comparisons (e.g., 1981–2024) may produce unintuitive results due to differences in index baselines across regions. Therefore, our analysis focuses primarily on more recent periods (e.g., 2016–2024 and 2020–2024) to ensure more meaningful and consistent comparisons across regions.
 ---
 
 ## Project Pipeline
-
 ```
+
 data/housing_price_indexes.csv
         │
         ▼
@@ -45,28 +52,31 @@ data/housing_price_indexes.csv
 2_raw_data_cleaning.py    → cleans data, saves to SQLite (cleaned_housing table)
         │
         ▼
-[EDA & Analysis scripts]  → queries and analysis NOT IN YET
+3_growth_analysis.py      → exploratory long-term NHPI comparison (1981 - 2024)
         │
         ▼
-Tableau                   → dashboards and visualizations
-```
+     Tableau              → dashboards and visualizations
 
+```
 ---
 
 ## Folder Structure
-change this throughout project whenever you add something new
+
 ```
+Change this throughout project whenever you add something new
+
 COSC301-Canadian-Housing-Analysis/
 ├── data/
 │   ├── housing_price_indexes.csv     # Raw dataset (do not modify)
 │   └── housing_data.db               # SQLite database (raw + cleaned tables)
 ├── scripts/
 │   ├── 1_setup_database.py           # Step 1: Load raw CSV into SQLite
-│   └── 2_raw_data_cleaning.py        # Step 2: Clean data and store in SQLite
+│   ├── 2_raw_data_cleaning.py        # Step 2: Clean data and store in SQLite
+│   ├── 3_growth_analysis.py          # Exploratory long-term comparison
 ├── README.md
 └── requirements.txt
-```
 
+```
 ---
 
 ## How to Reproduce
@@ -100,7 +110,7 @@ python scripts/2_raw_data_cleaning.py
 | `month` | int | Month extracted from ref_date |
 | `geo` | string | Geographic region (e.g., Canada, Ontario, Vancouver) |
 | `price_category` | string | Index type: Total (house and land), House only, Land only |
-| `value` | float | Price index value (base value: Dec 2016 = 100, so 38.2 would mean prices were about 38% if what they were in Dec 2016) |
+| `value` | float | Price index value (base value: Dec 2016 = 100, so 38.2 would mean prices were about 38% of their December 2016 level) |
 | `status` | string | Data quality flag: `normal`, `E` (estimate), `..` (not available), `x` (suppressed) |
 
 ---

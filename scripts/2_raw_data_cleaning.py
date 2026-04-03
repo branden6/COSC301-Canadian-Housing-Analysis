@@ -1,5 +1,12 @@
 #cleaning script for the housing price index dataset
 #loads raw data from sqlite, drops junk columns, fixes types, saves cleaned version
+"""
+Note:
+The NHPI is indexed to December 2016 = 100, meaning values represent relative
+price levels rather than absolute housing prices. As a result, long-term comparisons
+(e.g., 1981–2024) may not reflect intuitive growth patterns and are used here
+for exploratory purposes only.
+"""
 
 import pandas as pd
 import sqlite3
