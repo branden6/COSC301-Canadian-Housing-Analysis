@@ -1,0 +1,41 @@
+geo,peak_date,peak_year,peak_value,latest_date,latest_value,drawdown_pct,status
+"Victoria, British Columbia",1981-06,1981,132.8,2024-10,119.3,-10.16566265060242,Below Peak
+"Ottawa-Gatineau, Ontario part, Ontario/Quebec",2022-10,2022,175.9,2024-10,163.4,-7.10631040363843,Below Peak
+"Edmonton, Alberta",2007-10,2007,116.7,2024-10,109.4,-6.255355612682088,Below Peak
+"St. Catharines-Niagara, Ontario",2022-05,2022,130.5,2024-10,125.4,-3.90804597701149,Near Peak
+"Kitchener-Cambridge-Waterloo, Ontario",2022-06,2022,160.2,2024-10,154.3,-3.682896379525579,Near Peak
+"London, Ontario",2022-07,2022,148.1,2024-10,142.9,-3.511141120864273,Near Peak
+Ontario,2022-08,2022,127.6,2024-10,123.6,-3.1347962382445145,Near Peak
+"Greater Sudbury, Ontario",2022-06,2022,122.0,2024-10,118.6,-2.7868852459016438,Near Peak
+"Windsor, Ontario",2022-06,2022,148.7,2024-10,145.0,-2.4882313382649555,Near Peak
+Manitoba,2022-05,2022,143.6,2024-10,140.2,-2.367688022284127,Near Peak
+"Winnipeg, Manitoba",2022-05,2022,143.6,2024-10,140.2,-2.367688022284127,Near Peak
+"Hamilton, Ontario",2022-02,2022,116.8,2024-10,114.2,-2.226027397260269,Near Peak
+"Toronto, Ontario",2022-03,2022,115.6,2024-10,113.2,-2.076124567474041,Near Peak
+"Sherbrooke, Quebec",2023-08,2023,113.1,2024-10,110.9,-1.9451812555260732,Near Peak
+"Kelowna, British Columbia",2022-07,2022,124.6,2024-10,122.2,-1.9261637239165261,Near Peak
+British Columbia,2022-07,2022,128.7,2024-10,126.6,-1.6317016317016275,Near Peak
+"Saskatoon, Saskatchewan",2022-10,2022,109.5,2024-10,107.8,-1.5525114155251167,Near Peak
+"Guelph, Ontario",2021-12,2021,124.0,2024-10,122.2,-1.451612903225804,Near Peak
+Canada,2022-08,2022,126.1,2024-10,124.5,-1.2688342585249757,Near Peak
+"Vancouver, British Columbia",2022-07,2022,129.4,2024-10,127.8,-1.2364760432766682,Near Peak
+Saskatchewan,2022-09,2022,106.9,2024-10,105.7,-1.122544434050517,Near Peak
+"Regina, Saskatchewan",2022-06,2022,103.1,2024-10,102.2,-0.8729388942773925,Near Peak
+"Oshawa, Ontario",2022-01,2022,122.0,2024-10,121.2,-0.6557377049180304,Near Peak
+Nova Scotia,2022-05,2022,122.0,2024-10,121.7,-0.24590163934426,Near Peak
+"Halifax, Nova Scotia",2022-05,2022,122.0,2024-10,121.7,-0.24590163934426,Near Peak
+"Ottawa-Gatineau, Quebec part, Ontario/Quebec",2022-05,2022,116.0,2024-10,115.8,-0.17241379310345073,Near Peak
+Prince Edward Island,2022-07,2022,122.8,2024-10,122.6,-0.16286644951140297,Near Peak
+"Charlottetown, Prince Edward Island",2022-07,2022,122.8,2024-10,122.6,-0.16286644951140297,Near Peak
+"Trois-Rivières, Quebec",2024-05,2024,114.6,2024-10,114.6,0.0,Near Peak
+Atlantic Region,2023-03,2023,117.5,2024-10,117.5,0.0,Near Peak
+"St. John's, Newfoundland and Labrador",2024-06,2024,107.1,2024-10,107.1,0.0,Near Peak
+Quebec,2024-09,2024,143.3,2024-10,143.3,0.0,Near Peak
+"Québec, Quebec",2024-09,2024,132.7,2024-10,132.7,0.0,Near Peak
+Prairie Region,2024-10,2024,122.9,2024-10,122.9,0.0,At Peak
+"Calgary, Alberta",2024-07,2024,133.5,2024-10,133.5,0.0,Near Peak
+Newfoundland and Labrador,2024-06,2024,107.1,2024-10,107.1,0.0,Near Peak
+New Brunswick,2024-03,2024,120.0,2024-10,120.0,0.0,Near Peak
+"Montréal, Quebec",2024-10,2024,152.6,2024-10,152.6,0.0,At Peak
+"Saint John, Fredericton, and Moncton, New Brunswick",2024-03,2024,120.0,2024-10,120.0,0.0,Near Peak
+Alberta,2024-07,2024,122.2,2024-10,122.2,0.0,Near Peak

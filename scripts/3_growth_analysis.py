@@ -50,7 +50,10 @@ print(growth_df[['geo', 'start_year', 'start_value', 'end_year', 'end_value', 'g
 print("\nBottom 10 regions by long-term housing price growth:\n")
 print(growth_df[['geo', 'start_year', 'start_value', 'end_year', 'end_value', 'growth_percent']].tail(10))
 
-# Result saved for tableau
-growth_df.to_csv('data/growth_by_region.csv', index=False)
+# save to db and export csv for tableau
+with sqlite3.connect('data/housing_data.db') as conn:
+    growth_df.to_sql('growth_by_region', conn, if_exists='replace', index=False)
 
-print("\nDone. Growth analysis saved to data/growth_by_region.csv")
+growth_df.to_csv('data/3_growth_by_region.csv', index=False)
+
+print("\nDone. Growth analysis saved to db and data/3_growth_by_region.csv")

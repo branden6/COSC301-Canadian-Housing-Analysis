@@ -47,7 +47,10 @@ print(growth_df[['geo', 'start_value', 'end_value', 'growth_percent']].head(10))
 print("\nBottom 10 regions by recent growth:\n")
 print(growth_df[['geo', 'start_value', 'end_value', 'growth_percent']].tail(10))
 
-# Save for tableau
-growth_df.to_csv('data/recent_growth_by_region.csv', index=False)
+# save to db and export csv for tableau
+with sqlite3.connect('data/housing_data.db') as conn:
+    growth_df.to_sql('recent_growth_by_region', conn, if_exists='replace', index=False)
 
-print("\nDone. Recent growth analysis saved to data/recent_growth_by_region.csv")
+growth_df.to_csv('data/4_recent_growth_by_region.csv', index=False)
+
+print("\nDone. Recent growth analysis saved to db and data/4_recent_growth_by_region.csv")
