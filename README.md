@@ -1,4 +1,7 @@
 # COSC301 — Canadian Housing Price Index Analysis
+**By:** Fraser Muller & Branden Kennedy
+
+**Course:** COSC 301 - Introduction to Data Analytics
 
 Data analytics pipeline looking at housing price trends across Canada using data from 1981 - 2024.
 
@@ -8,7 +11,7 @@ Data analytics pipeline looking at housing price trends across Canada using data
 
 ## Analytics Question
 
-How have new housing price indexes changed across Canadian regions over time — and what patterns of booms, crashes, speculation, and peak pricing can be extracted from the data?
+How have new housing price indexes changed across Canadian regions over time, and what relationships exist between growth, volatility, speculation, and market cycles?
 
 ---
 
@@ -69,32 +72,72 @@ data/housing_price_indexes.csv
 8_peak_analysis.py            → all-time peak per region + current drawdown
         │
         ▼
+9_volatility_analysis.py      → measures market instability using standard deviation of year over year changes
+        │
+        ▼
+10_correlation_analysis.py    → analyzes relationships between growth, volatility, land premium, drawdown
+        │
+        ▼
+11_market_classification.py   → categorizes regions into market types based on growth, volatility, drawdown
+        │
+        ▼
      Tableau                  → dashboards and visualizations
 
 ```
+
+## Key Findings
+
+- **Housing prices increased significantly across most regions**, with particularly strong growth observed between 2020–2024, suggesting a widespread surge in demand during this period.
+
+- **Growth patterns vary greatly by region**, with some areas experiencing rapid increases while others show more moderate, steady trends.
+
+- **Market volatility differs across regions**, as some housing markets exhibit large year-over-year swings while others remain relatively stable.
+
+- **Higher-growth regions tend to be slightly more volatile**, indicating that rapid price increases may come with increased uncertainty.
+
+- **Speculation (land value vs house value) does not strongly explain growth**, as regions with higher land premiums do not consistently show higher price increases.
+
+- **More volatile regions are more likely to decline from their peak**, suggesting that unstable markets carry greater downside risk.
+
+- **Most regions remain at or near their historical peak prices**, though a small number show signs of decline, indicating uneven market cooling.
+
+- **Canadian housing markets can be grouped into distinct types**, including high-growth stable markets, high-growth volatile markets, moderate-growth regions, and declining markets.
 
 ---
 
 ## Folder Structure
 
 ```
-Change this throughout project whenever you add something new
 
 COSC301-Canadian-Housing-Analysis/
 ├── data/
-│   ├── housing_price_indexes.csv     # Raw dataset (do not modify)
-│   └── housing_data.db               # SQLite database (raw + cleaned tables)
+│   ├── housing_price_indexes.csv              # Raw dataset (do not modify)
+│   ├── housing_data.db                        # SQLite database (raw + cleaned tables)
+│   ├── 3_growth_by_region.csv                 # output for script 3
+│   ├── 4_recent_growth_by_region.csv          # output for script 4
+│   ├── 5_land_premium.csv                     # output for script 5
+│   ├── 6_yoy_change.csv                       # output for script 6
+│   ├── 7_boom_crash_labels.csv                # output for script 7
+│   ├── 8_peak_analysis.csv                    # output for script 8
+│   ├── 9_volatility_by_region.csv             # output for script 9
+│   ├── 10_regional_correlation_metrics.csv    # merged regional matrix for analysis and tableau visualization for script 10 
+│   ├── 10_regional_correlation_matrix.csv     # correlation between key housing indicators for script 10
+│   └── 11_market_classification.csv           # output for script 11
 ├── scripts/
-│   ├── 1_setup_database.py           # load raw CSV into SQLite
-│   ├── 2_raw_data_cleaning.py        # clean data and store in SQLite
-│   ├── 3_growth_analysis.py          # long-term growth by region
-│   ├── 4_recent_growth_analysis.py   # recent growth (2020-2024)
-│   ├── 5_land_premium.py             # land vs house speculation ratio
-│   ├── 6_yoy_change.py               # year-over-year % change
-│   ├── 7_boom_crash.py               # boom/crash labels
-│   └── 8_peak_analysis.py            # all-time peak + drawdown
+│   ├── 1_setup_database.py                    # load raw CSV into SQLite
+│   ├── 2_raw_data_cleaning.py                 # clean data and store in SQLite
+│   ├── 3_growth_analysis.py                   # long-term growth by region
+│   ├── 4_recent_growth_analysis.py            # recent growth (2020-2024)
+│   ├── 5_land_premium.py                      # land vs house speculation ratio
+│   ├── 6_yoy_change.py                        # year-over-year % change
+│   ├── 7_boom_crash.py                        # boom/crash labels
+│   ├── 8_peak_analysis.py                     # all-time peak + drawdown
+│   ├── 9_volatility_analysis.py               # volatility using standard deviation of year over year changes
+│   ├── 10_correlation_analysis.py             # relationships between growth, volatility, land premium, drawdown
+│   └── 11_market_classification.py            # classify regions into market types
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── run_all_scripts.py                         # runs all scripts with terminal command python run_all_scripts.py
 
 ```
 ---
@@ -114,15 +157,8 @@ source venv/bin/activate        # macOS/Linux
 # 3. Install dependencies
 pip install -r requirements.txt
 
-# 4. Run the pipeline in order
-python scripts/1_setup_database.py
-python scripts/2_raw_data_cleaning.py
-python scripts/3_growth_analysis.py
-python scripts/4_recent_growth_analysis.py
-python scripts/5_land_premium.py
-python scripts/6_yoy_change.py
-python scripts/7_boom_crash.py
-python scripts/8_peak_analysis.py
+# 4. Run the run_all_scripts script, which runs all scripts in order 
+python run_all_scripts.py
 ```
 
 ---
