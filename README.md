@@ -8,7 +8,7 @@ Data analytics pipeline looking at housing price trends across Canada using data
 
 ## Analytics Question
 
-TBD fill this out later once we start with the our actual scripts
+How have new housing price indexes changed across Canadian regions over time — and what patterns of booms, crashes, speculation, and peak pricing can be extracted from the data?
 
 ---
 
@@ -51,42 +51,27 @@ data/housing_price_indexes.csv
 2_raw_data_cleaning.py        → cleans data, saves to SQLite (cleaned_housing table)
         │
         ▼
-3_growth_analysis.py          → exploratory long-term NHPI comparison (1981 - 2024)
+3_growth_analysis.py          → long-term growth by region (1981–2024)
         │
         ▼
-4_recent_growth_analysis.py   → post COVID growth analysis (2020-2024)
+4_recent_growth_analysis.py   → recent growth by region (2020–2024)
+        │
+        ▼
+5_land_premium.py             → land vs house index ratio (speculation detection)
+        │
+        ▼
+6_yoy_change.py               → month-over-month % change vs same month last year
+        │
+        ▼
+7_boom_crash.py               → labels each month as Boom / Crash / Stable
+        │
+        ▼
+8_peak_analysis.py            → all-time peak per region + current drawdown
         │
         ▼
      Tableau                  → dashboards and visualizations
 
 ```
-
----
-
-## Analysis Scripts
-
-### 3_growth_analysis.py
-
-Explores long-term changes in the New Housing Price Index (NHPI) across Canadian regions.
-
-- Aggregates monthly data into yearly averages  
-- Compares earliest and latest available values per region  
-- Computes percentage growth  
-
-**Note:**  
-Due to the indexed nature of the NHPI (December 2016 = 100), long-term comparisons may produce unintuitive results and are used for exploratory context only.
-
----
-
-### 4_recent_growth_analysis.py
-
-Analyzes recent growth in new housing prices across Canadian regions (2020–2024).
-
-- Filters data to recent years (2020+)  
-- Computes yearly averages per region  
-- Calculates percentage growth from 2020 to latest available year (2024)
-- Ranks regions by growth 
-
 
 ---
 
@@ -100,10 +85,14 @@ COSC301-Canadian-Housing-Analysis/
 │   ├── housing_price_indexes.csv     # Raw dataset (do not modify)
 │   └── housing_data.db               # SQLite database (raw + cleaned tables)
 ├── scripts/
-│   ├── 1_setup_database.py           # Step 1: Load raw CSV into SQLite
-│   ├── 2_raw_data_cleaning.py        # Step 2: Clean data and store in SQLite
-│   ├── 3_growth_analysis.py          # Exploratory long-term comparison
-│   ├── 4_recent_growth_analysis.py   # post COVID growth analysis (2020-2024)
+│   ├── 1_setup_database.py           # load raw CSV into SQLite
+│   ├── 2_raw_data_cleaning.py        # clean data and store in SQLite
+│   ├── 3_growth_analysis.py          # long-term growth by region
+│   ├── 4_recent_growth_analysis.py   # recent growth (2020-2024)
+│   ├── 5_land_premium.py             # land vs house speculation ratio
+│   ├── 6_yoy_change.py               # year-over-year % change
+│   ├── 7_boom_crash.py               # boom/crash labels
+│   └── 8_peak_analysis.py            # all-time peak + drawdown
 ├── README.md
 └── requirements.txt
 
@@ -128,6 +117,12 @@ pip install -r requirements.txt
 # 4. Run the pipeline in order
 python scripts/1_setup_database.py
 python scripts/2_raw_data_cleaning.py
+python scripts/3_growth_analysis.py
+python scripts/4_recent_growth_analysis.py
+python scripts/5_land_premium.py
+python scripts/6_yoy_change.py
+python scripts/7_boom_crash.py
+python scripts/8_peak_analysis.py
 ```
 
 ---
