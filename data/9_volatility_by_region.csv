@@ -1,0 +1,41 @@
+geo,volatility_score
+"Calgary, Alberta",8.913862412791197
+"Edmonton, Alberta",8.227120781580288
+Alberta,8.181769771470462
+"Saskatoon, Saskatchewan",8.022367367275706
+Prairie Region,7.347136043518065
+"Toronto, Ontario",7.259308062128047
+Saskatchewan,6.874086566273347
+"Vancouver, British Columbia",6.467585852912158
+"Victoria, British Columbia",5.891475412556573
+"Kitchener-Cambridge-Waterloo, Ontario",5.793546881358858
+Ontario,5.649461190766333
+"Regina, Saskatchewan",5.615968822857351
+British Columbia,5.38084085958062
+"Ottawa-Gatineau, Ontario part, Ontario/Quebec",5.081010361835175
+"Windsor, Ontario",4.562718847696178
+"Kelowna, British Columbia",4.537206971057423
+Canada,4.526053591906031
+"London, Ontario",4.422239688123725
+Manitoba,4.400475629986924
+"St. Catharines-Niagara, Ontario",4.351066721029006
+Newfoundland and Labrador,4.332485030826963
+"Oshawa, Ontario",4.327065469724673
+"Hamilton, Ontario",4.310001222412426
+"Winnipeg, Manitoba",4.223426667621796
+"Montréal, Quebec",4.169621922214003
+"St. John's, Newfoundland and Labrador",4.138729184565825
+Quebec,3.786644489366958
+"Guelph, Ontario",3.7461959419340602
+"Greater Sudbury, Ontario",3.5529943707440332
+"Québec, Quebec",3.3723826464094975
+"Saint John, Fredericton, and Moncton, New Brunswick",2.943303191772305
+Prince Edward Island,2.859509568510069
+"Charlottetown, Prince Edward Island",2.859509568510069
+Nova Scotia,2.5782758633009615
+"Halifax, Nova Scotia",2.576524561785349
+Atlantic Region,2.393772269830619
+New Brunswick,2.325362310223706
+"Ottawa-Gatineau, Quebec part, Ontario/Quebec",2.100071852085589
+"Sherbrooke, Quebec",2.0409270815530185
+"Trois-Rivières, Quebec",1.5373326921843942

@@ -1,0 +1,41 @@
+geo,growth_percent,volatility_score,drawdown_pct,market_type
+"Kitchener-Cambridge-Waterloo, Ontario",38.62977014059364,5.793546881358858,-3.682896379525579,High Growth & Stable
+"Calgary, Alberta",35.33803543781182,8.913862412791197,0.0,High Growth & High Volatility (Risky)
+"Windsor, Ontario",32.41410625094596,4.562718847696178,-2.4882313382649555,High Growth & Stable
+"Montréal, Quebec",31.068422188646664,4.169621922214003,0.0,High Growth & Stable
+"Winnipeg, Manitoba",30.841004836948038,4.223426667621796,-2.367688022284127,High Growth & Stable
+Manitoba,30.841004836948038,4.400475629986924,-2.367688022284127,High Growth & Stable
+"Ottawa-Gatineau, Ontario part, Ontario/Quebec",30.181147486990323,5.081010361835175,-7.10631040363843,High Growth & Stable
+"Québec, Quebec",28.296103049078784,3.3723826464094975,0.0,High Growth & Stable
+Quebec,27.201606306239324,3.786644489366958,0.0,High Growth & Stable
+Alberta,23.88722255548889,8.181769771470462,0.0,Moderate Growth (Stable)
+Prairie Region,23.78474878857436,7.347136043518065,0.0,Moderate Growth (Stable)
+"London, Ontario",23.21405613884722,4.422239688123725,-3.511141120864273,Moderate Growth (Stable)
+"Charlottetown, Prince Edward Island",18.568665377176018,2.859509568510069,-0.16286644951140297,Moderate Growth (Stable)
+Prince Edward Island,18.568665377176018,2.859509568510069,-0.16286644951140297,Moderate Growth (Stable)
+Canada,18.404684656168403,4.526053591906031,-1.2688342585249757,Moderate Growth (Stable)
+"Vancouver, British Columbia",18.180704441041357,6.467585852912158,-1.2364760432766682,Moderate Growth (Stable)
+British Columbia,17.74317866502234,5.38084085958062,-1.6317016317016275,Moderate Growth (Stable)
+"Kelowna, British Columbia",16.468342348075097,4.537206971057423,-1.9261637239165261,Moderate Growth (Stable)
+"Saint John, Fredericton, and Moncton, New Brunswick",15.86206896551724,2.943303191772305,0.0,Moderate Growth (Stable)
+New Brunswick,15.86206896551724,2.325362310223706,0.0,Moderate Growth (Stable)
+Ontario,15.77203035465386,5.649461190766333,-3.1347962382445145,Moderate Growth (Stable)
+"Oshawa, Ontario",15.549568111577758,4.327065469724673,-0.6557377049180304,Moderate Growth (Stable)
+"Victoria, British Columbia",15.349061145883484,5.891475412556573,-10.16566265060242,Declining Market
+"Greater Sudbury, Ontario",15.121006776379481,3.5529943707440332,-2.7868852459016438,Moderate Growth (Stable)
+"St. Catharines-Niagara, Ontario",14.127390453244995,4.351066721029006,-3.90804597701149,Moderate Growth (Stable)
+"Halifax, Nova Scotia",13.988221436984688,2.576524561785349,-0.24590163934426,Moderate Growth (Stable)
+Nova Scotia,13.988221436984688,2.5782758633009615,-0.24590163934426,Moderate Growth (Stable)
+Atlantic Region,13.748176956733104,2.393772269830619,0.0,Moderate Growth (Stable)
+"Guelph, Ontario",11.339832237587858,3.7461959419340602,-1.451612903225804,Moderate Growth (Stable)
+"Edmonton, Alberta",11.110352479303586,8.227120781580288,-6.255355612682088,Declining Market
+"Toronto, Ontario",10.520975923987425,7.259308062128047,-2.076124567474041,Moderate Growth (Stable)
+"Saskatoon, Saskatchewan",10.289855072463764,8.022367367275706,-1.5525114155251167,Moderate Growth (Stable)
+Saskatchewan,10.003503854239678,6.874086566273347,-1.122544434050517,Moderate Growth (Stable)
+"Regina, Saskatchewan",9.577414134148531,5.615968822857351,-0.8729388942773925,Moderate Growth (Stable)
+"Trois-Rivières, Quebec",8.793364702129356,1.5373326921843942,0.0,Moderate Growth (Stable)
+Newfoundland and Labrador,8.577256501784785,4.332485030826963,0.0,Moderate Growth (Stable)
+"St. John's, Newfoundland and Labrador",8.577256501784785,4.138729184565825,0.0,Moderate Growth (Stable)
+"Sherbrooke, Quebec",6.859066859066855,2.0409270815530185,-1.9451812555260732,Moderate Growth (Stable)
+"Ottawa-Gatineau, Quebec part, Ontario/Quebec",6.721953466943116,2.100071852085589,-0.17241379310345073,Moderate Growth (Stable)
+"Hamilton, Ontario",6.373592233009699,4.310001222412426,-2.226027397260269,Moderate Growth (Stable)
